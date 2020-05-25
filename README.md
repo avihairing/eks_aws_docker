@@ -1,2 +1,2 @@
 # eks_aws_docker
-asdasa
+AWS CI CD example
