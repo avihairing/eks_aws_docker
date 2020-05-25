@@ -1,10 +1,10 @@
-FROM python:3 
+FROM python:3.7.2-slim
 
-WORKDIR /usr/src/app
+COPY . /app
+WORKDIR /app
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install flask
 
-COPY . .
 
-CMD [ "python3", "./main.py" ]
+ENTRYPOINT ["python", "app.py"]
